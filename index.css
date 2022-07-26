@@ -1,0 +1,185 @@
+*{ 
+    padding: 0;
+    margin:0;
+}
+
+body {
+    background-color: #181818;
+}
+
+/*All font*/
+#menu, .recommended, .card{
+    font-family: 'roboto';
+    font-size: 15px;
+    color: #fff;
+}
+
+/*main panel*/
+#main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;   
+    margin: 0 auto;
+    border: 2px solid blue;
+}
+
+/*secundary panel #1*/
+#menu{
+    display: flex;
+    flex-flow: column wrap;
+    border: 2px solid red;
+    width: 230px;
+    background-color: #202020;
+    position: fixed;
+}
+
+tr {
+    height: 35px;
+    width: 20px;
+}
+
+td {
+    border: solid salmon 1px;
+    padding-left: 50px;
+}
+
+tr:hover {
+    background-color: #373737;
+    cursor: pointer;
+}
+
+/*Secundary panel #2*/
+#videos-panel {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: absolute;
+    overflow: scroll;
+    left: 230px;
+    border: 2px solid green;    
+}
+
+.recommended { /*buttons inside secundary panel #2*/
+    background-color: #373737;
+    border: 2px solid #404040;
+    border-radius: 40%;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+}
+
+/*Secundary panel #2.1 search feature*/
+#browser {
+    order: 1;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%; /*inside the secundary panel*/
+    line-height: 30px;
+    justify-content: center;
+    padding: 5px;
+    background-color: #202020;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    border: 2px solid pink;
+}
+
+#txt-fld-search {
+    background-color: #121212;
+    height: 30px;
+    border: 1px solid #373737;
+    color: #878787;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.search{
+    border-radius: 0%;
+}
+
+/*Secundary panel #2.2 recomendations feature*/
+#filters {
+    order: 2;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    line-height: 30px;
+    align-content: flex-start;
+    padding: 5px;
+    background-color: #202020;
+    position: fixed;
+    top: 50px;
+    z-index: 100;
+    border: 2px solid yellowgreen;
+}
+
+/*Secundary panel #2.3 videos to watch feature*/
+#video-gallery {
+    order: 3;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    top: 93px;
+    border: 2px solid brown;
+}
+
+/*Card with all video information*/
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 300px;
+    margin: 12px 0px 12px 12px;
+    border: solid 1px blue;
+}
+
+/*thumbnail*/
+.preview {
+    height: 150px;
+    width: 270px;
+    padding: 3px;
+}
+
+.video-gallery-description {
+    border: solid 1px palevioletred;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 90%;
+    padding: 5px;
+}
+
+.profile-picture {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;    
+}
+
+.timestamp {
+    color: #fff;
+    height: 20px;
+    width: 35px;
+    background-color: rgba(0, 0, 0, 125);
+    border-radius: 15%;
+    text-align: center;
+    position: static;
+}
+
+.data {
+    padding-left: 15px;
+    width: 100%;
+    border: solid green 1px;
+    color: #878787;
+}
+
+.data .title {
+    /*TODO fuente y orden*/
+    color: #fff;
+    font-weight: 600;
+}
