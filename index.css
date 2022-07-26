@@ -26,7 +26,8 @@ body {
 /*secundary panel #1*/
 #menu{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    overflow: scroll;
     width: 230px;
     height: 100%;
     background-color: #202020;
@@ -40,13 +41,22 @@ tr {
 }
 
 td {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-right: 5px;
     /*border: solid salmon 1px;*/
-    padding-left: 50px;
 }
 
 tr:hover {
     background-color: #373737;
     cursor: pointer;
+}
+
+.profile-picture-menu {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;    
 }
 
 /*Secundary panel #2*/
@@ -69,6 +79,11 @@ tr:hover {
     border: 2px solid #404040;
 }
 
+.recommended:hover {
+    background-color: #878787;
+    cursor: pointer;
+}
+
 /*Secundary panel #2.1 search feature*/
 #browser {
     order: 1;
@@ -76,13 +91,21 @@ tr:hover {
     flex-flow: row wrap;
     width: 100%; /*inside the secundary panel*/
     line-height: 30px;
-    justify-content: center;
+    align-items: center;
     padding: 5px;
     background-color:rgba(32, 32, 32,0.95);
     position: fixed;
     top: 0px;
     z-index: 100;
     /*border: 2px solid pink;*/
+}
+
+.search {
+    display: flex;
+    order: 1;
+    flex-grow: 1;
+    margin-left: 150px;
+    padding-right: 5px;
 }
 
 #txt-fld-search {
@@ -95,8 +118,37 @@ tr:hover {
     font-weight: 500;
 }
 
-.search{
+.search-btn{
     border-radius: 0%;
+    height: 32px;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
+
+.voice {
+    margin-left: 5px;
+}
+
+.voice:hover {
+    cursor: pointer;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+}
+
+.icons:hover {
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    order: 2;
+    flex-grow: 1;
+    padding: 5px;
 }
 
 /*Secundary panel #2.2 recomendations feature*/
@@ -128,33 +180,35 @@ tr:hover {
     position: relative;
     overflow: hidden;
     top: 93px;
-    border: 2px solid brown;
+    /* border: 2px solid brown; */
 }
 
 /*Card with all video information*/
 .card {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     width: 280px;
     height: 250px;
     margin: 12px 0px 12px 12px;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
 }
 
 /*thumbnail*/
 .preview {
     height: 150px;
     width: 270px;
-    padding: 3px;
+}
+
+.preview:hover {
+    cursor: pointer;
 }
 
 .video-gallery-description {
-    border: solid 1px palevioletred;
     display: flex;
     flex-flow: row nowrap;
-    width: 90%;
-    padding: 5px;
+    width: 100%;
+    /* border: solid 1px palevioletred; */
 }
 
 .profile-picture {
@@ -163,10 +217,14 @@ tr:hover {
     border-radius: 50%;    
 }
 
+.profile-picture:hover {
+    cursor: pointer;
+}
+
 .timestamp {
     color: #fff;
     height: 20px;
-    width: 35px;
+    width: 40px;
     background-color: rgba(0, 0, 0, 125);
     border-radius: 15%;
     text-align: center;
@@ -178,12 +236,22 @@ tr:hover {
 .data {
     padding-left: 15px;
     width: 100%;
-    border: solid green 1px;
     color: #878787;
+    /* border: solid green 1px; */
+}
+
+.data:hover {
+    cursor: pointer;
 }
 
 .data .title {
     /*TODO fuente y orden*/
     color: #fff;
+    text-align: left;
     font-weight: 600;
+    width: 100%;
+    max-height: 35px;
+    max-block-size: 35px;
+    overflow-y: hidden;
+    /* text-overflow: ellipsis; */
 }
