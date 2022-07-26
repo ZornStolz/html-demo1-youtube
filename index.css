@@ -20,17 +20,18 @@ body {
     flex-flow: row wrap;
     width: 100%;   
     margin: 0 auto;
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
 }
 
 /*secundary panel #1*/
 #menu{
     display: flex;
     flex-flow: column wrap;
-    border: 2px solid red;
     width: 230px;
+    height: 100%;
     background-color: #202020;
     position: fixed;
+    /*border: 2px solid red;*/
 }
 
 tr {
@@ -39,7 +40,7 @@ tr {
 }
 
 td {
-    border: solid salmon 1px;
+    /*border: solid salmon 1px;*/
     padding-left: 50px;
 }
 
@@ -52,22 +53,20 @@ tr:hover {
 #videos-panel {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    align-items: flex-start;
+    width: auto;
     position: absolute;
-    overflow: scroll;
     left: 230px;
-    border: 2px solid green;    
+    /*border: 2px solid green;*/
 }
 
 .recommended { /*buttons inside secundary panel #2*/
     background-color: #373737;
-    border: 2px solid #404040;
     border-radius: 40%;
     height: 35px;
     text-align: center;
     padding: 5px;
+    border: 2px solid #404040;
 }
 
 /*Secundary panel #2.1 search feature*/
@@ -79,16 +78,17 @@ tr:hover {
     line-height: 30px;
     justify-content: center;
     padding: 5px;
-    background-color: #202020;
+    background-color:rgba(32, 32, 32,0.95);
     position: fixed;
     top: 0px;
     z-index: 100;
-    border: 2px solid pink;
+    /*border: 2px solid pink;*/
 }
 
 #txt-fld-search {
     background-color: #121212;
     height: 30px;
+    width: 25rem;
     border: 1px solid #373737;
     color: #878787;
     font-size: 15px;
@@ -106,13 +106,15 @@ tr:hover {
     flex-flow: row wrap;
     width: 100%;
     line-height: 30px;
-    align-content: flex-start;
+    justify-content: flex-start;
     padding: 5px;
-    background-color: #202020;
+    background-color:rgba(32, 32, 32,0.95);
     position: fixed;
-    top: 50px;
+    top: 45px;
     z-index: 100;
-    border: 2px solid yellowgreen;
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid #404040;
+    /*border: 2px solid yellowgreen;*/
 }
 
 /*Secundary panel #2.3 videos to watch feature*/
@@ -120,8 +122,7 @@ tr:hover {
     order: 3;
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
-    width: 100%;
+    width: auto;
     height: auto;
     margin: 0 auto;
     position: relative;
@@ -135,7 +136,8 @@ tr:hover {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    width: 300px;
+    width: 280px;
+    height: 250px;
     margin: 12px 0px 12px 12px;
     border: solid 1px blue;
 }
@@ -168,7 +170,9 @@ tr:hover {
     background-color: rgba(0, 0, 0, 125);
     border-radius: 15%;
     text-align: center;
-    position: static;
+    position: relative;
+    left: 110px;
+    bottom: 30px;
 }
 
 .data {
